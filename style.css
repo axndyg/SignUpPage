@@ -16,32 +16,79 @@ body {
 .container { 
     margin: 70px;
     display: flex; 
+    align-items: center;
+ 
     flex-direction: column;
     gap: 10px; 
     padding: 30px 60px;
     background-color: rgba(134, 134, 141, 0.842);
     border-radius: 10px;
     box-shadow: 0 0 5px #ccc;
-    width: 40%;
-    min-width: 500px;
-    flex: 0 1 auto;
-
+    max-width: 400px;
+    min-width: 200px;
+    flex: 1 1 auto;
 
 }
 
 .title { 
     font-size: 30px;
     font-weight: bolder;
-    align-self: center;
+
+}
+
+form {
+    margin-bottom: 10px;
 }
 
 input { 
     padding: 8px 12px;
     font-size: 1.5em;
-    margin: 8px;
+    margin: 15px 0;
     width: 100%;
     box-sizing: border-box;
     border-radius: 10px;
     outline: none !important;
     border: 3px solid rgb(90, 98, 102);
+}
+
+/* Styling Elements */
+
+button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border-color: rgb(90, 98, 102);
+    background: rgb(90, 98, 102);
+    color: white;
+    font-size: 18px;
+    width: 50%;
+}
+
+button:hover { 
+    background-color: rgb(44, 143, 77);
+    background: rgb(44, 143, 77);
+}
+
+/* Validation Handling */ 
+input.valid { 
+    border-color: rgb(48, 163, 87);
+}
+
+input.invalid { 
+    border-color: rgb(233, 96, 96);
+}
+
+input + p { 
+    font-size: .9em;
+    font-weight:500;
+    text-align: center;
+    margin: 0 10px;
+    color: rgb(233, 96, 96);
+    opacity: 0;
+    height: 0;
+}
+
+input.invalid + p { 
+    opacity: 100%; 
+    height: auto;
+    margin-bottom: 10px;
 }
